@@ -1,21 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --container-xl: 34.5rem;
+  --color-primary: #16a781;
+
+  --text-xxs: 0.78125rem;
+  --text-xs: 0.9375rem;
+  --text-sm: 1rem;
+  --text-base: 1.25rem;
+  --text-lg: 1.875rem;
+  --text-xl: 2.34375rem;
+  --text-2xl: 2.8125rem;
+  --text-3xl: 3.75rem;
+  --text-4xl: 4.6875rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  @apply bg-[#EBECEC] text-[#272727];
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply text-base;
+  margin: 0 auto;
+}
+
+input {
+  @apply text-[#272727];
+}
+
+::placeholder {
+  @apply text-[#8f8f8f];
 }
