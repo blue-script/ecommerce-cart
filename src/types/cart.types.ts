@@ -1,17 +1,21 @@
-export interface ICart {
-    id: string;
-    createdAt: string;
-    updatedAt: string;
+import { TCartProduct } from './product.types'
 
-    items: ICartItem[];
+export interface ICart {
+	id: string
+	createdAt: string
+	updatedAt: string
+
+	items: ICartItem[]
 }
 
-export interface ICartItem {
-    id: string;
-    productId: string;
-    quantity: number;
+export interface ICartItem extends ISimpleCartItem {
+	createdAt: string
+	updatedAt: string
 }
 
 export interface ISimpleCartItem {
-
+	id: string
+	product: TCartProduct
+	quantity: number
+	asSecondItem?: boolean
 }
